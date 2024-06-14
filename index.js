@@ -1,6 +1,11 @@
 const WebSocket = require('ws');
+require('dotenv').config();
 
-const port = 30000;
+if (!process.env.PORT) {
+  throw new Error('PORT environment variable is not defined');
+}
+
+const port = process.env.PORT;
 
 const RTC = new WebSocket.Server({ port });
 
