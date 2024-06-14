@@ -1,6 +1,6 @@
 const WebSocket = require('ws');
 
-const port = 25568;
+const port = {{SERVER_PORT}};
 
 const RTC = new WebSocket.Server({ port });
 
